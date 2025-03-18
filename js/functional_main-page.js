@@ -9,12 +9,12 @@ function updateImage() {
 
   if (window.innerWidth < 870) {
     present_photo.src = present_block.classList.contains("two-slide")
-      ? "/imgs/present-photo-2_for-small-screen.jpg"
-      : "/imgs/present-photo-1_for-small-screen.jpeg";
+      ? "imgs/present-photo-2_for-small-screen.jpg"
+      : "imgs/present-photo-1_for-small-screen.jpeg";
   } else {
     present_photo.src = present_block.classList.contains("two-slide")
-      ? "/imgs/present-photo-2.png"
-      : "/imgs/present-photo-1 1.jpg";
+      ? "imgs/present-photo-2.png"
+      : "imgs/present-photo-1 1.jpg";
   }
 }
 

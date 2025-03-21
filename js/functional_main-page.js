@@ -109,7 +109,7 @@ const product_card = [
   ...main_list_product.querySelectorAll(".products-list_product"),
 ];
 
-window.addEventListener("resize", () => {
+function updateLayout() {
   if (window.innerWidth <= 670) {
     main_list_product.prepend(prev_btn);
     main_list_product.appendChild(next_btn);
@@ -119,7 +119,7 @@ window.addEventListener("resize", () => {
         card.classList.add("hidden");
       }
     });
-  } else if (window.innerWidth > 670) {
+  } else {
     product_card.forEach((card) => {
       card.classList.remove("hidden");
     });
@@ -166,4 +166,8 @@ window.addEventListener("resize", () => {
       next_btn.classList.remove("disabled");
     }
   };
-});
+}
+
+updateLayout();
+
+window.addEventListener("resize", updateLayout);

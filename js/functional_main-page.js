@@ -67,7 +67,6 @@ function toggleSlide() {
 
 btn_nextSlide.onclick = toggleSlide;
 
-
 const block_aboutCompane = document.querySelector(".main_about-products");
 const product_list = document.querySelector(".our-menu_products-list");
 
@@ -95,3 +94,76 @@ menu_burger.onclick = () => {
   );
   block_with_content.classList.toggle("show");
 };
+
+const main_list_product = document.querySelector(".our-menu_products-list");
+
+const prev_btn = document.createElement("button");
+prev_btn.className = "prev_btn";
+prev_btn.innerHTML = '<img src="imgs/arrow-left.png">';
+
+const next_btn = document.createElement("button");
+next_btn.className = "next_btn";
+next_btn.innerHTML = '<img src="imgs/arrow-rigth.png">';
+
+const product_card = [
+  ...main_list_product.querySelectorAll(".products-list_product"),
+];
+
+window.addEventListener("resize", () => {
+  if (window.innerWidth <= 670) {
+    main_list_product.prepend(prev_btn);
+    main_list_product.appendChild(next_btn);
+
+    product_card.forEach((card) => {
+      if (!card.hasAttribute("id")) {
+        card.classList.add("hidden");
+      }
+    });
+  } else if (window.innerWidth > 670) {
+    product_card.forEach((card) => {
+      card.classList.remove("hidden");
+    });
+
+    if (prev_btn.parentNode) {
+      prev_btn.parentNode.removeChild(prev_btn);
+    }
+
+    if (next_btn.parentNode) {
+      next_btn.parentNode.removeChild(next_btn);
+    }
+  }
+
+  let index = 0;
+
+  next_btn.onclick = () => {
+    if (index < product_card.length - 1) {
+      product_card[index].classList.add("hidden");
+      product_card[index].removeAttribute("id");
+
+      index++;
+
+      product_card[index].classList.remove("hidden");
+      product_card[index].setAttribute("id", "main");
+
+      next_btn.classList.toggle("disabled", index === product_card.length - 1);
+      prev_btn.classList.remove("disabled");
+    }
+  };
+
+  prev_btn.classList.toggle("disabled", index === 0);
+
+  prev_btn.onclick = () => {
+    if (index > 0) {
+      product_card[index].classList.add("hidden");
+      product_card[index].removeAttribute("id");
+
+      index--;
+
+      product_card[index].classList.remove("hidden");
+      product_card[index].setAttribute("id", "main");
+
+      prev_btn.classList.toggle("disabled", index === 0);
+      next_btn.classList.remove("disabled");
+    }
+  };
+});

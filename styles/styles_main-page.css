@@ -921,23 +921,32 @@ footer .footer-text_content .content_our-data p {
     line-height: 32px;
   }
 }
-@media (max-width: 460px) {
+@media (max-width: 470px) {
   main .main_our-menu .our-menu_products-list {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
             flex-direction: column;
-  }
-  main .main_our-menu .our-menu_products-list .products-list_product {
-    margin-bottom: 30px;
-  }
-  main .main_our_advantages {
     -webkit-box-align: center;
         -ms-flex-align: center;
             align-items: center;
+    gap: 30px;
+    margin: 25px;
   }
-  main .main_our_advantages h2 {
-    text-align: center;
+  main .main_our-menu .our-menu_products-list .block_for_swipeBtn {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    width: 50%;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
   }
 }
 @media (max-width: 437px) {

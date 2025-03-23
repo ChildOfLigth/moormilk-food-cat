@@ -10,7 +10,7 @@ function updateImage() {
   if (window.innerWidth < 870) {
     present_photo.src = present_block.classList.contains("two-slide")
       ? "imgs/present-photo-2_for-small-screen.jpg"
-      : "imgs/present-photo-1_for-small-screen.jpeg";
+      : "imgs/present-photo-1_for-small-screen.jpg";
   } else {
     present_photo.src = present_block.classList.contains("two-slide")
       ? "imgs/present-photo-2.png"
@@ -110,25 +110,53 @@ const product_card = [
 ];
 
 function updateLayout() {
-  if (window.innerWidth <= 670) {
-    main_list_product.prepend(prev_btn);
-    main_list_product.appendChild(next_btn);
-
+  function checkerID() {
     product_card.forEach((card) => {
-      if (!card.hasAttribute("id")) {
+      if (card && !card.hasAttribute("id")) {
         card.classList.add("hidden");
       }
     });
-  } else {
+  }
+
+  let width = window.innerWidth;
+
+  if (width <= 670) {
+    main_list_product.prepend(prev_btn);
+    main_list_product.appendChild(next_btn);
+    checkerID();
+  }
+
+  if (width <= 470) {
+    if (prev_btn && next_btn && main_list_product.contains(prev_btn) && main_list_product.contains(next_btn)) {
+      prev_btn.parentNode.removeChild(prev_btn);
+      next_btn.parentNode.removeChild(next_btn);
+      console.log('Confirm delete');
+    }
+
+    if (prev_btn && next_btn) {
+      const block_for_swipeBtn = document.createElement("div");
+      block_for_swipeBtn.classList.add("block_for_swipeBtn");
+
+      block_for_swipeBtn.appendChild(prev_btn);
+      block_for_swipeBtn.appendChild(next_btn);
+
+      main_list_product.appendChild(block_for_swipeBtn);
+      console.log('Breakpoint');
+    }
+
+    checkerID();
+  }
+
+  if (width > 670) {
     product_card.forEach((card) => {
       card.classList.remove("hidden");
     });
 
-    if (prev_btn.parentNode) {
+    if (prev_btn && prev_btn.parentNode) {
       prev_btn.parentNode.removeChild(prev_btn);
     }
 
-    if (next_btn.parentNode) {
+    if (next_btn && next_btn.parentNode) {
       next_btn.parentNode.removeChild(next_btn);
     }
   }

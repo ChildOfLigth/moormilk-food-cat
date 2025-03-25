@@ -80,7 +80,7 @@ window.addEventListener("scroll", () => {
 });
 
 window.addEventListener("scroll", () => {
-  if (window.scrollY >= 1300) {
+  if (window.scrollY <= 1300) {
     product_list.classList.add("show");
   }
 });

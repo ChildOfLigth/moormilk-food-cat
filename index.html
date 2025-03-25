@@ -8,31 +8,7 @@
     <title>MooreMilk</title>
   </head>
   <body>
-    <header>
-      <div class="header-content">
-        <img src="imgs/logo.png" alt="" class="header-logotypy" />
-        <a href="menu.html">Каталог товарів</a>
-        <div class="content_social-media-list">
-          <img src="imgs/telegram.png" alt="" class="list-logo" />
-          <img src="imgs/facebook.png" alt="" class="list-logo" />
-          <img src="imgs/instagram.png" alt="" class="list-logo" />
-        </div>
-
-        <div class="content_menu-burger">
-          <span></span><span></span><span></span>
-        </div>
-
-        <div class="content_content-open-menu-burger">
-          <a href="menu.html">Каталог товарів</a>
-          <div class="content_social-media-list">
-            <img src="imgs/telegram.png" alt="" class="list-logo" />
-            <img src="imgs/facebook.png" alt="" class="list-logo" />
-            <img src="imgs/instagram.png" alt="" class="list-logo" />
-          </div>
-        </div>
-      </div>
-    </header>
-
+    <div class="header_container"></div>
     <main>
       <div class="main_present-block">
         <div class="decoration-block"></div>
@@ -81,7 +57,6 @@
               class="decoration-part_img-for-animation"
             />
           </div>
-
         </div>
         <div class="about-products_text-part">
           <h2>Про нашу продукцію</h2>
@@ -221,24 +196,13 @@
         </ul>
       </div>
     </main>
-
-    <footer>
-      <img src="imgs/logo.png" alt="logo" class="logo" />
-
-      <div class="footer-text_content">
-        <div class="content_links-navigation">
-          <a href="menu.html">Каталог товарів</a>
-        </div>
-
-        <div class="content_our-data">
-          <p>moormilk@gmail.com</p>
-          <p>+380991758377</p>
-          <p>+380963412179</p>
-          <p>м. Чернігів вул Самоквасова 29</p>
-        </div>
-      </div>
-    </footer>
+    <div class="footer_container"></div>
 
     <script src="js/functional_main-page.js"></script>
+    <script type="module">
+      import getHTMLFromFile from "./js/exportFunc.js";
+      getHTMLFromFile("components/header.html", ".header_container");
+      getHTMLFromFile("components/footer.html", ".footer_container");
+    </script>
   </body>
 </html>

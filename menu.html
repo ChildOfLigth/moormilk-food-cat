@@ -1,11 +1,45 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="styles/resetBrowserStyles.css" />
+    <link rel="stylesheet" href="styles/styles_menu-page.css" />
     <title>MooreMilk / Меню</title>
-</head>
-<body>
-    
-</body>
+  </head>
+  <body>
+    <div class="header_container"></div>
+    <main>
+      <div class="main_present-block">
+        <div class="present-block_text-part">
+          <h1>Різноманітне меню на будь-який смак</h1>
+          <h2>У нас є те, що обов'язково сподобається вашому коту</h2>
+        </div>
+
+        <div class="present-block_decorative-block">
+          <img
+            src="imgs/elipse-decoration-forMenu.png"
+            alt=""
+            class="elipse-decoration-forMenu"
+          />
+          <img
+            src="imgs/phg-cat-for-menu-presentBlock.png"
+            alt=""
+            class="cat-for-menu-presentBlock"
+          />
+        </div>
+      </div>
+
+      <div class="main_product-list">
+        <h2>= Меню =</h2>
+      </div>
+    </main>
+    <div class="footer_container"></div>
+
+    <script type="module">
+      import getHTMLFromFile from "./js/exportFunc.js";
+      getHTMLFromFile("components/header.html", ".header_container");
+      getHTMLFromFile("components/footer.html", ".footer_container");
+    </script>
+  </body>
 </html>

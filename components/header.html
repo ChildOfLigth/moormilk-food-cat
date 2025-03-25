@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <style>
+      header {
+        position: sticky;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 12vh;
+        min-height: 101px;
+        z-index: 1000 !important;
+        background-color: var(--default-color-one);
+      }
+      header .header-content {
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        -webkit-box-align: center;
+        -ms-flex-align: center;
+        align-items: center;
+        -ms-flex-line-pack: center;
+        align-content: center;
+        margin: 0 auto;
+        -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+        justify-content: space-between;
+        width: 87%;
+        height: 100%;
+      }
+      header .header-content .header-logotypy {
+        width: 100px;
+        height: auto;
+        display: block;
+      }
+      header .header-content a {
+        color: white;
+        font-weight: 600;
+        font-size: calc(26px + 0.5230125523vh);
+        display: block;
+      }
+      header .header-content .content_social-media-list {
+        width: 12%;
+        max-width: 220px;
+        min-width: 147px;
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+        justify-content: space-between;
+      }
+      header .header-content .content_social-media-list .list-logo {
+        width: 24%;
+        height: 100%;
+      }
+      header .header-content .content_menu-burger {
+        display: none;
+        width: 12%;
+        min-width: 50px;
+        height: auto;
+        cursor: pointer;
+      }
+      header .header-content .content_menu-burger span {
+        margin-bottom: 11px;
+        background-color: white;
+        height: 3px;
+        width: 100%;
+        -webkit-transition: all 0.4s;
+        transition: all 0.4s;
+      }
+      header .header-content .content_menu-burger.open-menu span {
+        position: relative;
+      }
+      header .header-content .content_menu-burger.open-menu span:nth-child(1) {
+        rotate: 44deg;
+        top: 17px;
+      }
+      header .header-content .content_menu-burger.open-menu span:nth-child(2) {
+        opacity: 0;
+        visibility: hidden;
+      }
+      header .header-content .content_menu-burger.open-menu span:nth-child(3) {
+        rotate: -44deg;
+        bottom: 11px;
+      }
+      header .header-content .content_content-open-menu-burger {
+        opacity: 0;
+        visibility: hidden;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        background-color: #796a47;
+        width: 100%;
+        padding: 70px 0;
+        text-align: center;
+        margin: 0 auto;
+        z-index: 100 !important;
+        -webkit-transition: all 0.4s;
+        transition: all 0.4s;
+      }
+      header .header-content .content_content-open-menu-burger.show {
+        opacity: 1;
+        visibility: visible;
+      }
+      header .header-content .content_content-open-menu-burger a {
+        color: white;
+        font-weight: 600;
+        font-size: calc(26px + 0.5230125523vh);
+        display: block;
+        margin-bottom: 30px;
+      }
+      header
+        .header-content
+        .content_content-open-menu-burger
+        .content_social-media-list {
+        width: 12%;
+        max-width: 220px;
+        min-width: 147px;
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+        justify-content: space-between;
+        margin: 0 auto;
+      }
+      header
+        .header-content
+        .content_content-open-menu-burger
+        .content_social-media-list
+        .list-logo {
+        width: 24%;
+        height: 100%;
+      }
+
+      @media (max-width: 1000px) {
+        header .header-content a {
+          font-size: calc(22px + 0.3138075314vw);
+        }
+      }
+
+      @media (max-width: 690px) {
+        header .header-content {
+          display: -webkit-box;
+          display: -ms-flexbox;
+          display: flex;
+          -webkit-box-align: center;
+          -ms-flex-align: center;
+          align-items: center;
+        }
+        header .header-content .header-logotypy {
+          width: 80px;
+        }
+        header .header-content a {
+          display: none;
+        }
+        header .header-content .content_social-media-list {
+          display: none;
+        }
+        header .header-content .content_menu-burger {
+          display: -webkit-box;
+          display: -ms-flexbox;
+          display: flex;
+          -webkit-box-orient: vertical;
+          -webkit-box-direction: normal;
+          -ms-flex-direction: column;
+          flex-direction: column;
+        }
+      }
+    </style>
+    <title>Header</title>
+  </head>
+  <body>
+    <header>
+      <div class="header-content">
+        <img src="imgs/logo.png" alt="" class="header-logotypy" />
+        <a href="menu.html">Каталог товарів</a>
+        <div class="content_social-media-list">
+          <img src="imgs/telegram.png" alt="" class="list-logo" />
+          <img src="imgs/facebook.png" alt="" class="list-logo" />
+          <img src="imgs/instagram.png" alt="" class="list-logo" />
+        </div>
+
+        <div class="content_menu-burger">
+          <span></span><span></span><span></span>
+        </div>
+
+        <div class="content_content-open-menu-burger">
+          <a href="menu.html">Каталог товарів</a>
+          <div class="content_social-media-list">
+            <img src="imgs/telegram.png" alt="" class="list-logo" />
+            <img src="imgs/facebook.png" alt="" class="list-logo" />
+            <img src="imgs/instagram.png" alt="" class="list-logo" />
+          </div>
+        </div>
+      </div>
+    </header>
+  </body>
+</html>

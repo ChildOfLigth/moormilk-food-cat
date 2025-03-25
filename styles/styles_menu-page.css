@@ -1,0 +1,90 @@
+@import url("https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&display=swap");
+body {
+  font-family: "Raleway", serif;
+  overflow-x: hidden;
+}
+
+main {
+  background-color: #f1ebdc;
+}
+main .main_present-block {
+  background-color: #f1dbad;
+  width: 100vw;
+  height: 90vh;
+  overflow-y: hidden;
+  overflow-x: hidden;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  position: relative;
+}
+main .main_present-block .present-block_text-part {
+  color: var(--default-color-one);
+  position: relative;
+  top: 0;
+  left: 120px;
+  width: 45%;
+}
+main .main_present-block .present-block_text-part h1 {
+  font-size: calc(42px + 1.359832636vw);
+  margin-bottom: 28px;
+}
+main .main_present-block .present-block_text-part h2 {
+  font-size: calc(28px + 0.6276150628vw);
+  line-height: 50px;
+}
+main .main_present-block .present-block_decorative-block {
+  position: relative;
+}
+main .main_present-block .present-block_decorative-block .elipse-decoration-forMenu {
+  position: relative;
+  top: 120px;
+  right: -200px;
+  width: 100%;
+  -webkit-animation: rotateElipse 15s linear infinite;
+          animation: rotateElipse 15s linear infinite;
+}
+main .main_present-block .present-block_decorative-block .cat-for-menu-presentBlock {
+  position: absolute;
+  top: 26%;
+  right: -90px;
+  -webkit-filter: drop-shadow(4px -10px 70px rgba(0, 0, 0, 0.2));
+          filter: drop-shadow(4px -10px 70px rgba(0, 0, 0, 0.2));
+  width: 76%;
+}
+main .main_product-list {
+  padding: 120px;
+}
+main .main_product-list h2 {
+  font-size: calc(40px + 1.1506276151vw);
+  font-weight: 500;
+  text-align: center;
+}
+
+@-webkit-keyframes rotateElipse {
+  0% {
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg);
+  }
+  100% {
+    -webkit-transform: rotate(360deg);
+            transform: rotate(360deg);
+  }
+}
+
+@keyframes rotateElipse {
+  0% {
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg);
+  }
+  100% {
+    -webkit-transform: rotate(360deg);
+            transform: rotate(360deg);
+  }
+}

@@ -1,3 +1,10 @@
+:root {
+  --default-color-one: #a0906b;
+  --default-color-two: #bda778;
+  --fsz-for-h2: calc(30px + 14 * (100vw / 1912));
+}
+
+
 * {
   padding: 0;
   margin: 0;

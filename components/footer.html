@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <style>
+      footer {
+        width: 100%;
+        height: auto;
+        background-color: #a0906b;
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        -webkit-box-align: start;
+        -ms-flex-align: start;
+        align-items: start;
+        padding: 90px;
+        gap: 90px;
+      }
+      footer .logo {
+        width: 150px;
+        height: auto;
+      }
+      footer .footer-text_content {
+        color: white;
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        -webkit-box-align: start;
+        -ms-flex-align: start;
+        align-items: start;
+        gap: 40px;
+      }
+      footer .footer-text_content .content_links-navigation a {
+        font-weight: 600;
+        color: white;
+        font-size: calc(21px + 0.2615062762vw);
+      }
+      footer .footer-text_content .content_our-data p {
+        font-size: calc(19px + 0.1569037657vw);
+        font-weight: 500;
+        margin-bottom: 17px;
+      }
+
+      @media (max-width: 730px) {
+        footer {
+          padding: 60px 20px;
+        }
+      }
+      
+      @media (max-width: 611px) {
+        footer {
+          -webkit-box-orient: vertical;
+          -webkit-box-direction: normal;
+          -ms-flex-direction: column;
+          flex-direction: column;
+          -webkit-box-pack: center;
+          -ms-flex-pack: center;
+          justify-content: center;
+          -webkit-box-align: center;
+          -ms-flex-align: center;
+          align-items: center;
+          gap: 30px;
+        }
+        footer .footer-text_content {
+          text-align: center;
+          -webkit-box-align: center;
+          -ms-flex-align: center;
+          align-items: center;
+          -webkit-box-orient: vertical;
+          -webkit-box-direction: normal;
+          -ms-flex-direction: column;
+          flex-direction: column;
+        }
+      }
+    </style>
+    <title>Footer</title>
+  </head>
+  <body>
+    <footer>
+      <img src="imgs/logo.png" alt="logo" class="logo" />
+
+      <div class="footer-text_content">
+        <div class="content_links-navigation">
+          <a href="menu.html">Каталог товарів</a>
+        </div>
+
+        <div class="content_our-data">
+          <p>moormilk@gmail.com</p>
+          <p>+380991758377</p>
+          <p>+380963412179</p>
+          <p>м. Чернігів вул Самоквасова 29</p>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>
